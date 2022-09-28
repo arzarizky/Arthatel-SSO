@@ -20,7 +20,7 @@
                                 @if (auth()->user()->avatar == "-")
                                     <img alt="image" src="{{ 'template' }}/assets/img/avatar/avatar-1.png" class="rounded-circle author-box-picture">
                                 @else
-                                    <img alt="image" src="{{ auth()->user()->avatar }}" class="rounded-circle author-box-picture">
+                                    <img alt="image" src="{{ auth()->user()->avatar }}" width="100" height="100" class="rounded-circle author-box-picture">
                                 @endif
 
                             </div>
@@ -76,10 +76,7 @@
             <div class="tab-pane card card-info fade" id="profile1" role="tabpanel" aria-labelledby="profile-tab1">
                 @include('portal.profile')
             </div>
-            <div class="tab-pane card card-info fade" id="tim1" role="tabpanel" aria-labelledby="tim-tab1">
-                <div class="card-header">
-                    <h4 class="text-info">Tim</h4>
-                </div>
+            <div class="tab-pane fade" id="tim1" role="tabpanel" aria-labelledby="tim-tab1">
                 @include('portal.tim')
             </div>
         </div>
